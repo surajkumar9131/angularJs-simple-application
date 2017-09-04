@@ -1,0 +1,34 @@
+<div class="user-table">
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Date</th> 
+      <th>User Details</th>
+      <th>Category</th>
+      <th>Status</th>
+      <th>Location</th>
+    </tr>
+    <tr ng-repeat="user in userCtrl.userDetails">
+      <td>{{$index + 1}}</td>
+      <td>{{user.date}}</td>
+      <td>{{user.name}}, {{user.number}}, {{user.category}}</td>
+      <td>
+        <select name="category" ng-model="user.category"> 
+          <option ng-repeat="cat in userCtrl.category">{{cat.name}}</option>
+        </select>
+      </td>
+      <td>
+        <select name="status" ng-model="user.status">
+          <option value="" selected disabled hidden>Select Status</option>
+          <option ng-repeat="st in userCtrl.status">{{st.name}}</option>
+        </select>  
+      </td>
+      <td>
+        <select name="location" ng-model="user.location">
+          <option value="" selected disabled hidden>Select Location</option>
+          <option ng-repeat="user in userCtrl.userDetails">{{user.location}}</option>
+        </select> 
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,18 @@
+<div class="home">
+  <div id="map"></div>
+  <div class="filters">
+    <div>
+      <select ng-model="cat.name" ng-options="cat.name for cat in homeCtrl.category" ng-change="homeCtrl.applyFilter(s.name,cat.name);">
+        <option value='' disabled selected>Select Category</option>
+      </select>
+    </div>
+    <div>
+      <select ng-model="s.name" ng-options="s.name for s in homeCtrl.status" ng-change="homeCtrl.applyFilter(s.name,cat.name);">
+        <option value='' disabled selected>Select Status</option>
+      </select>
+    </div>
+    <div>
+      <div class="all-btn" ng-click="homeCtrl.removeFilters();">All</div>
+    </div>
+  </div>
+</div>

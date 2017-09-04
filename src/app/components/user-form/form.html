@@ -1,0 +1,39 @@
+<div class="user-form">
+  <div class="form-section">
+    <div class="form-header"><b>Add New User Details</b></div>
+    <form class="usr-form" ng-submit="formCtrl.addNewUser();">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" ng-model="formCtrl.newUser.name" required/>
+      </div>
+      <div>
+        <label for="number">Mobile Number:</label>
+        <input type="number" name="number" id="number" ng-model="formCtrl.newUser.number" required/>
+      </div>
+      <div>
+        <label for="category">Category:</label>
+        <select name="category" ng-model="formCtrl.newUser.category">
+          <option value="" selected disabled hidden>Select Category</option>
+          <option>Technology</option>
+          <option>Design</option>
+          <option>Marketing</option>
+          <option>Operations</option>
+        </select>
+      </div>
+      <div>
+        <label for="location">Search Location:</label>
+        <div class="input-group">
+            <input name="place" type="text" class="form-control" 
+            ng-model="formCtrl.newUser.location" required />
+            <span class="input-group-btn">
+                <button class="btn btn-primary" type="button" ng-click="formCtrl.search();">Search</button>
+            </span>
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <div class="map-search">
+    <div id="map"></div>
+  </div> 
+</div>

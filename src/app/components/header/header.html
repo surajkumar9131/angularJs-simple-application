@@ -1,0 +1,8 @@
+<header>
+  <div class="head-icon" ng-click="headCtrl.showIcon();"><span ng-if="!headCtrl.showMenu">&#9776;</span><span ng-if="headCtrl.showMenu">&times;<span></div>
+  <div class="nav-menu" ng-show="headCtrl.showMenu">
+    <div ng-click="headCtrl.goToHomePage();">Home</div>
+    <div ng-click="headCtrl.showIcon();" ui-sref="home.user-form">Add New User</div>
+    <div ng-click="headCtrl.showIcon();" ui-sref="home.view-user">View User</div>
+  </div>
+</header>

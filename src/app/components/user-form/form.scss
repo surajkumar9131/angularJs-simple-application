@@ -1,0 +1,47 @@
+.user-form{
+  display: flex;
+  &>.form-section{
+    padding: 20px;
+    width: 30%;
+    &>.form-header{
+      font-size: 20px;
+      color: #1A237E;
+      line-height:35px;
+    }
+    &>.usr-form{
+      width: 100%;
+      &>div{
+        line-height: 25px;
+        margin: 5px 0;
+        display: flex;
+        flex-flow: column;
+        &>input{
+          width: 100%;
+          outline: none;
+        }
+        &>select{
+          width: 100%;
+          outline: none;
+          height: 30px;
+        }
+      }
+      &>button{
+        background-color: #1A237E;
+        width: 150px;
+        line-height: 30px;
+        border: none;
+        outline: none;
+        margin: 20px 150px;
+        color: white;
+      }
+    }
+  }
+  &>.map-search{
+    margin: 20px;
+    width: 70%;
+    &>div{
+      height: calc(100vh - 100px);
+      background-color: grey;
+    }
+  }
+}
