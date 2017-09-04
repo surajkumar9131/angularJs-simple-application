@@ -2,7 +2,7 @@
 Install dependencies: npm install -g  gulp bower
 
 Clone the repository: 
-
+git clone git@github.com:surajkumar9131/angularJs-simple-application.git
 
 Run `npm install && bower install`
 Gulp tasks:
